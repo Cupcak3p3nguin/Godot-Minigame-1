@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://dfucc2hcldhn7"]
 
-[ext_resource type="ArrayMesh" uid="uid://cguwankyjjjlp" path="res://platformer assets/yellow/star_yellow.obj" id="1_2qo34"]
 [ext_resource type="Script" uid="uid://chlhf1p5qhye0" path="res://Scripts/coin.gd" id="1_jgi06"]
+[ext_resource type="ArrayMesh" uid="uid://civ0cp0c8d3i" path="res://platformer assets/red/star_red.obj" id="2_jgi06"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_sgwqp"]
 height = 0.31781006
@@ -13,7 +13,7 @@ collision_mask = 7
 script = ExtResource("1_jgi06")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-mesh = ExtResource("1_2qo34")
+mesh = ExtResource("2_jgi06")
 skeleton = NodePath("")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
