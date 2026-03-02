@@ -1,10 +1,44 @@
-[gd_scene load_steps=6 format=3 uid="uid://cg487x3wldk2q"]
+[gd_scene load_steps=24 format=3 uid="uid://cg487x3wldk2q"]
 
 [ext_resource type="PackedScene" uid="uid://cnrckw8wltntv" path="res://Scenes/hazard_fall.tscn" id="1_k5f4k"]
-[ext_resource type="PackedScene" uid="uid://m11kfdlqnjon" path="res://Scenes/platform.tscn" id="1_tumq0"]
 [ext_resource type="PackedScene" uid="uid://dr21emafvi37e" path="res://Scenes/hazard_bomb.tscn" id="3_6phgx"]
+[ext_resource type="ArrayMesh" uid="uid://6l4ohtbyw4jn" path="res://platformer assets/red/signage_arrows_right_red.obj" id="3_bvt00"]
 [ext_resource type="PackedScene" uid="uid://dfucc2hcldhn7" path="res://Scenes/coin.tscn" id="4_81xng"]
+[ext_resource type="ArrayMesh" uid="uid://cwu1lwg2wnmay" path="res://platformer assets/blue/platform_1x1x1_blue.obj" id="5_0f350"]
 [ext_resource type="PackedScene" uid="uid://b3lksjdl28sdo" path="res://Scenes/spring.tscn" id="5_wqkje"]
+[ext_resource type="ArrayMesh" uid="uid://b447rx1l13g1i" path="res://platformer assets/red/platform_1x1x1_red.obj" id="6_0f350"]
+[ext_resource type="ArrayMesh" uid="uid://bgy2tdv25454r" path="res://platformer assets/yellow/platform_1x1x1_yellow.obj" id="7_8c0lf"]
+[ext_resource type="ArrayMesh" uid="uid://b4sqfaroesvap" path="res://platformer assets/blue/platform_2x2x1_blue.obj" id="8_oqgf2"]
+[ext_resource type="ArrayMesh" uid="uid://buwwxd14o78r7" path="res://platformer assets/yellow/platform_2x2x1_yellow.obj" id="10_oqgf2"]
+[ext_resource type="ArrayMesh" uid="uid://co4ux5afkjrqx" path="res://platformer assets/red/platform_4x2x2_red.obj" id="11_qxfql"]
+[ext_resource type="ArrayMesh" uid="uid://djnn80q8lg3kb" path="res://platformer assets/yellow/platform_4x2x1_yellow.obj" id="12_ha31o"]
+[ext_resource type="ArrayMesh" uid="uid://dlywm72l4w84w" path="res://platformer assets/blue/platform_4x4x1_blue.obj" id="13_pa6b8"]
+[ext_resource type="ArrayMesh" uid="uid://duh32t3if7cpw" path="res://platformer assets/red/flag_C_red.obj" id="14_crh0w"]
+[ext_resource type="ArrayMesh" uid="uid://7few55xevhtp" path="res://platformer assets/red/flag_B_red.obj" id="15_c7le1"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8c0lf"]
+size = Vector3(0.98179626, 1.0234375, 1.0013733)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ha31o"]
+size = Vector3(2.0229187, 1, 1.9862671)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qxfql"]
+size = Vector3(3.8351288, 1.9591064, 2.1237793)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pa6b8"]
+size = Vector3(4.347168, 1, 1.9171143)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_crh0w"]
+size = Vector3(3.8532562, 1.0234375, 3.770752)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2klc5"]
+size = Vector3(1.0372772, 1.0234375, 1.1125488)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_c7le1"]
+size = Vector3(1.0279655, 1.0234375, 1.1843414)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_nngtn"]
+size = Vector3(3.9039764, 1.0234375, 3.753662)
 
 [node name="Level" type="Node3D"]
 
@@ -13,104 +47,278 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42, -3, 4)
 
 [node name="Platforms" type="Node3D" parent="."]
 
-[node name="Platform30" parent="Platforms" instance=ExtResource("1_tumq0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.994326, 4, 3)
-
-[node name="Platform31" parent="Platforms" instance=ExtResource("1_tumq0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.994326, 4, 7)
-
-[node name="Platform32" parent="Platforms" instance=ExtResource("1_tumq0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.991488, 4, 5)
-
-[node name="Platform26" parent="Platforms" instance=ExtResource("1_tumq0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.977303, 4, 3)
-
-[node name="Platform27" parent="Platforms" instance=ExtResource("1_tumq0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.977303, 4, 7)
-
-[node name="Platform28" parent="Platforms" instance=ExtResource("1_tumq0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.974465, 4, 5)
-
-[node name="Platform22" parent="Platforms" instance=ExtResource("1_tumq0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.982977, 4, 3)
-
-[node name="Platform23" parent="Platforms" instance=ExtResource("1_tumq0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.982977, 4, 7)
-
-[node name="Platform24" parent="Platforms" instance=ExtResource("1_tumq0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.98014, 4, 5)
-
-[node name="Platform18" parent="Platforms" instance=ExtResource("1_tumq0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.988651, 4, 3)
-
-[node name="Platform19" parent="Platforms" instance=ExtResource("1_tumq0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.988651, 4, 7)
-
-[node name="Platform20" parent="Platforms" instance=ExtResource("1_tumq0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.985814, 4, 5)
-
-[node name="Platform14" parent="Platforms" instance=ExtResource("1_tumq0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.997163, 0, 3)
-
-[node name="Platform15" parent="Platforms" instance=ExtResource("1_tumq0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.997163, 0, 7)
-
-[node name="Platform16" parent="Platforms" instance=ExtResource("1_tumq0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.9943256, 0, 5)
-
-[node name="Platform10" parent="Platforms" instance=ExtResource("1_tumq0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 3)
-
-[node name="Platform11" parent="Platforms" instance=ExtResource("1_tumq0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 7)
-
-[node name="Platform12" parent="Platforms" instance=ExtResource("1_tumq0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.997163, 0, 5)
-
-[node name="Platform8" parent="Platforms" instance=ExtResource("1_tumq0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 3)
-
-[node name="Platform5" parent="Platforms" instance=ExtResource("1_tumq0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 3)
-
-[node name="Platform4" parent="Platforms" instance=ExtResource("1_tumq0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 7)
-
-[node name="Platform3" parent="Platforms" instance=ExtResource("1_tumq0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 7)
-
-[node name="Platform2" parent="Platforms" instance=ExtResource("1_tumq0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.9971628, 0, 5)
-
-[node name="Platform" parent="Platforms" instance=ExtResource("1_tumq0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 5)
-
-[node name="Platform6" parent="Platforms" instance=ExtResource("1_tumq0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 3)
-
-[node name="Platform7" parent="Platforms" instance=ExtResource("1_tumq0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 7)
-
-[node name="Platform9" parent="Platforms" instance=ExtResource("1_tumq0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 5)
-
 [node name="Hazards" type="Node3D" parent="."]
 
 [node name="Hazard_Bomb3" parent="Hazards" instance=ExtResource("3_6phgx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.3666618, 1.3238971, 5.657507)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.217354, 2.1473062, 5.5627275)
+
+[node name="Hazard_Bomb3" parent="Hazards/Hazard_Bomb3" instance=ExtResource("3_6phgx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.010494, 4.8114004, 0.2786107)
+
+[node name="Hazard_Bomb3" parent="Hazards/Hazard_Bomb3/Hazard_Bomb3" instance=ExtResource("3_6phgx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.147469, -1.581861, -4.0171976)
 
 [node name="Hazard_Bomb2" parent="Hazards" instance=ExtResource("3_6phgx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.537668, 5.4028964, 5.125016)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.537668, 1.3587326, 4.826932)
 
 [node name="Hazard_Bomb" parent="Hazards" instance=ExtResource("3_6phgx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.8101406, 1.4059553, 2.8385887)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.268693, 2.0725176, 3.1156344)
 
 [node name="Coins" type="Node3D" parent="."]
 
 [node name="Coin" parent="Coins" instance=ExtResource("4_81xng")]
-transform = Transform3D(0.5877712, 0, -0.80902725, 0, 1, 0, 0.80902725, 0, 0.5877712, 15.512747, 5.462118, 3.4387212)
+transform = Transform3D(0.5877712, 0, -0.80902725, 0, 1, 0, 0.80902725, 0, 0.5877712, 16.864204, 3.2170079, 4.763111)
 
 [node name="Springs" type="Node3D" parent="."]
 
 [node name="Spring" parent="Springs" instance=ExtResource("5_wqkje")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 1, 5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.408049, 1.0066874, 5.1446295)
+
+[node name="Platform1x1x1Blue" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.7171142, 0, 5.00705)
+mesh = ExtResource("5_0f350")
+
+[node name="RigidBody3D" type="RigidBody3D" parent="Platform1x1x1Blue"]
+collision_layer = 2
+collision_mask = 5
+freeze = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform1x1x1Blue/RigidBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.007270813, 0.5187378, -0.008682251)
+shape = SubResource("BoxShape3D_8c0lf")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Platform1x1x1Blue"]
+mesh = ExtResource("5_0f350")
+
+[node name="Platform1x1x1Red" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.50532, -4.7683716e-07, 1.3158888)
+mesh = ExtResource("6_0f350")
+
+[node name="RigidBody3D" type="RigidBody3D" parent="Platform1x1x1Red"]
+collision_layer = 2
+collision_mask = 5
+freeze = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform1x1x1Red/RigidBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5187378, 0)
+shape = SubResource("BoxShape3D_8c0lf")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Platform1x1x1Red"]
+mesh = ExtResource("6_0f350")
+
+[node name="Platform1x1x1Yellow" type="MeshInstance3D" parent="Platform1x1x1Red"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.134211, 4.7683716e-07, 4.1926174)
+mesh = ExtResource("7_8c0lf")
+
+[node name="RigidBody3D" type="RigidBody3D" parent="Platform1x1x1Red/Platform1x1x1Yellow"]
+collision_layer = 2
+collision_mask = 5
+freeze = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform1x1x1Red/Platform1x1x1Yellow/RigidBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5187378, 0)
+shape = SubResource("BoxShape3D_8c0lf")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Platform1x1x1Red/Platform1x1x1Yellow"]
+mesh = ExtResource("7_8c0lf")
+
+[node name="Platform2x2x1Blue" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.19425, 0, 4.2221494)
+mesh = ExtResource("8_oqgf2")
+
+[node name="RigidBody3D" type="RigidBody3D" parent="Platform2x2x1Blue"]
+collision_layer = 2
+collision_mask = 5
+freeze = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform2x2x1Blue/RigidBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0066986084, 0.44134808, -0.0039978027)
+shape = SubResource("BoxShape3D_ha31o")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Platform2x2x1Blue"]
+mesh = ExtResource("8_oqgf2")
+
+[node name="Coin" parent="." instance=ExtResource("4_81xng")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.365729, 1.4394095, 3.778376)
+
+[node name="SignageArrowsRightRed" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.023838928, 0, -0.9997158, 0, 1, 0, 0.9997158, 0, -0.023838928, 14.229672, 0.3842119, 4.30237)
+mesh = ExtResource("3_bvt00")
+
+[node name="RigidBody3D" type="RigidBody3D" parent="SignageArrowsRightRed"]
+collision_layer = 2
+collision_mask = 5
+freeze = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SignageArrowsRightRed/RigidBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5187378, 0)
+shape = SubResource("BoxShape3D_qxfql")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="SignageArrowsRightRed"]
+mesh = ExtResource("3_bvt00")
+
+[node name="Platform2x2x1Yellow" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.841137, 0, 4.904032)
+mesh = ExtResource("10_oqgf2")
+
+[node name="RigidBody3D" type="RigidBody3D" parent="Platform2x2x1Yellow"]
+collision_layer = 2
+collision_mask = 5
+freeze = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform2x2x1Yellow/RigidBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5187378, 0)
+shape = SubResource("BoxShape3D_qxfql")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Platform2x2x1Yellow"]
+mesh = ExtResource("8_oqgf2")
+
+[node name="Platform1x1x1Blue2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.532393, 0.07753587, 5.121077)
+mesh = ExtResource("5_0f350")
+skeleton = NodePath("../Springs")
+
+[node name="RigidBody3D" type="RigidBody3D" parent="Platform1x1x1Blue2"]
+collision_layer = 2
+collision_mask = 5
+freeze = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform1x1x1Blue2/RigidBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5187378, 0)
+shape = SubResource("BoxShape3D_qxfql")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Platform1x1x1Blue2"]
+mesh = ExtResource("5_0f350")
+
+[node name="Platform4x2x2Red" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.6169152, 0, 0, 0, 1, 26.802128, 2.4193482, 5.1766057)
+mesh = ExtResource("11_qxfql")
+
+[node name="RigidBody3D" type="RigidBody3D" parent="Platform4x2x2Red"]
+collision_layer = 2
+collision_mask = 5
+freeze = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform4x2x2Red/RigidBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.013587952, 0.98657227, 0)
+shape = SubResource("BoxShape3D_qxfql")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Platform4x2x2Red"]
+mesh = ExtResource("11_qxfql")
+
+[node name="Coin2" parent="." instance=ExtResource("4_81xng")]
+transform = Transform3D(-0.3090502, 0, -0.951046, 0, 1, 0, 0.951046, 0, -0.3090502, 26.568008, 4.1954546, 5.190637)
+
+[node name="Spring" parent="." instance=ExtResource("5_wqkje")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.231182, 3.692081, 5.460474)
+
+[node name="Platform4x2x1Yellow" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.712498, 3.97084, 1.3097992)
+mesh = ExtResource("12_ha31o")
+
+[node name="RigidBody3D" type="RigidBody3D" parent="Platform4x2x1Yellow"]
+collision_layer = 2
+collision_mask = 5
+freeze = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform4x2x1Yellow/RigidBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.004638672, 0.55648375, 0.019104004)
+shape = SubResource("BoxShape3D_pa6b8")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Platform4x2x1Yellow"]
+mesh = ExtResource("12_ha31o")
+
+[node name="Spring2" parent="." instance=ExtResource("5_wqkje")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.74905, 4.889787, 1.1737089)
+
+[node name="Platform4x4x1Blue" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45.22688, 3.0785093, 5.0350313)
+mesh = ExtResource("13_pa6b8")
+
+[node name="RigidBody3D" type="RigidBody3D" parent="Platform4x4x1Blue"]
+collision_layer = 2
+collision_mask = 5
+freeze = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform4x4x1Blue/RigidBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.052742004, 0.5187378, 0.15283203)
+shape = SubResource("BoxShape3D_crh0w")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Platform4x4x1Blue"]
+mesh = ExtResource("8_oqgf2")
+
+[node name="FlagCRed" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45.919228, 4.108966, 4.87612)
+mesh = ExtResource("14_crh0w")
+
+[node name="Coin3" parent="." instance=ExtResource("4_81xng")]
+transform = Transform3D(0.010314554, 0, 0.99994737, 0, 1, 0, -0.99994737, 0, 0.010314554, 44.6965, 4.6570015, 4.9475994)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.811442, -4.7683716e-07, 11.559516)
+mesh = ExtResource("6_0f350")
+skeleton = NodePath("../Platform1x1x1Red/MeshInstance3D")
+
+[node name="RigidBody3D" type="RigidBody3D" parent="MeshInstance3D"]
+collision_layer = 2
+collision_mask = 5
+freeze = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/RigidBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.005455017, 0.5187378, 0.020019531)
+shape = SubResource("BoxShape3D_2klc5")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="MeshInstance3D"]
+mesh = ExtResource("6_0f350")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.082997, 0, 16.16067)
+mesh = ExtResource("7_8c0lf")
+skeleton = NodePath("../Platform1x1x1Red/Platform1x1x1Yellow/MeshInstance3D")
+
+[node name="RigidBody3D" type="RigidBody3D" parent="MeshInstance3D2"]
+collision_layer = 2
+collision_mask = 5
+freeze = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D2/RigidBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.02863121, 0.5187378, 0.06554413)
+shape = SubResource("BoxShape3D_c7le1")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="MeshInstance3D2"]
+mesh = ExtResource("7_8c0lf")
+
+[node name="Coin4" parent="." instance=ExtResource("4_81xng")]
+transform = Transform3D(0.54814726, 0, 0.83638185, 0, 1, 0, -0.83638185, 0, 0.54814726, 15.580626, 1.4845855, 23.814209)
+
+[node name="Platform4x4x1Blue2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.449404, 0, 23.920094)
+mesh = ExtResource("13_pa6b8")
+
+[node name="RigidBody3D" type="RigidBody3D" parent="Platform4x4x1Blue2"]
+collision_layer = 2
+collision_mask = 5
+freeze = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform4x4x1Blue2/RigidBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.023216248, 0.5187378, 0.19711304)
+shape = SubResource("BoxShape3D_c7le1")
+
+[node name="FlagBRed" type="MeshInstance3D" parent="Platform4x4x1Blue2/RigidBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.027118683, 1.0304565, 0.31176186)
+mesh = ExtResource("15_c7le1")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Platform4x4x1Blue2"]
+mesh = ExtResource("8_oqgf2")
+
+[node name="RigidBody3D" type="RigidBody3D" parent="Platform4x4x1Blue2/MeshInstance3D"]
+collision_layer = 2
+collision_mask = 5
+freeze = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform4x4x1Blue2/MeshInstance3D/RigidBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.011390686, 0.5187378, 0.09008789)
+shape = SubResource("BoxShape3D_nngtn")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Platform4x4x1Blue2/MeshInstance3D"]
+mesh = ExtResource("8_oqgf2")
